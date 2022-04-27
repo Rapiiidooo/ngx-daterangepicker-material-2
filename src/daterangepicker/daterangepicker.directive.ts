@@ -1,28 +1,29 @@
 import {
-  Directive,
-  ViewContainerRef,
-  ComponentFactoryResolver,
-  ElementRef,
-  HostListener,
-  forwardRef,
   ChangeDetectorRef,
-  OnInit,
-  OnChanges,
-  SimpleChanges,
-  Input,
+  ComponentFactoryResolver,
+  Directive,
   DoCheck,
+  ElementRef,
+  EventEmitter,
+  forwardRef,
+  HostBinding,
+  HostListener,
+  Input,
   KeyValueDiffer,
   KeyValueDiffers,
+  OnChanges,
+  OnInit,
   Output,
-  EventEmitter,
   Renderer2,
-  HostBinding
+  SimpleChanges,
+  ViewContainerRef
 } from '@angular/core';
 import { DaterangepickerComponent } from './daterangepicker.component';
 import { NG_VALUE_ACCESSOR } from '@angular/forms';
 import * as _dayjs from 'dayjs';
 import { LocaleConfig } from './daterangepicker.config';
 import { LocaleService } from './locale.service';
+
 const dayjs = _dayjs;
 
 @Directive({
@@ -38,7 +39,7 @@ const dayjs = _dayjs;
       provide: NG_VALUE_ACCESSOR,
       useExisting: forwardRef(() => DaterangepickerDirective), multi: true
     }
-]
+  ]
 })
 export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
   public picker: DaterangepickerComponent;
@@ -117,11 +118,13 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
   @Input() closeOnAutoApply = true;
   _locale: LocaleConfig = {};
   @Input() set locale(value) {
-    this._locale = {...this._localeService.config, ...value};
+    this._locale = { ...this._localeService.config, ...value };
   }
+
   get locale(): any {
     return this._locale;
   }
+
   @Input()
   private _endKey: string;
   private _startKey: string;
@@ -132,6 +135,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
       this._startKey = 'startDate';
     }
   }
+
   @Input() set endKey(value) {
     if (value !== null) {
       this._endKey = value;
@@ -139,6 +143,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
       this._endKey = 'endDate';
     }
   }
+
   notForChangesProperty: Array<string> = [
     'locale',
     'endKey',
@@ -148,17 +153,23 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
   get value() {
     return this._value || null;
   }
+
   set value(val) {
     this._value = val;
     this._onChange(val);
     this._changeDetectorRef.markForCheck();
   }
+
   @Output('change') onChange: EventEmitter<Object> = new EventEmitter();
   @Output('rangeClicked') rangeClicked: EventEmitter<Object> = new EventEmitter();
   @Output('datesUpdated') datesUpdated: EventEmitter<Object> = new EventEmitter();
   @Output() startDateChanged: EventEmitter<Object> = new EventEmitter();
   @Output() endDateChanged: EventEmitter<Object> = new EventEmitter();
-  @HostBinding('disabled') get disabled() { return this._disabled; }
+
+  @HostBinding('disabled') get disabled() {
+    return this._disabled;
+  }
+
   constructor(
     public viewContainerRef: ViewContainerRef,
     public _changeDetectorRef: ChangeDetectorRef,
@@ -169,7 +180,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
     private _localeService: LocaleService,
     private elementRef: ElementRef
   ) {
-    this.endKey  = 'endDate';
+    this.endKey = 'endDate';
     this.startKey = 'startDate';
     this.drops = 'down';
     this.opens = 'auto';
@@ -179,6 +190,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
     this.picker = (<DaterangepickerComponent>componentRef.instance);
     this.picker.inline = false; // set inline to false for all directive usage
   }
+
   ngOnInit() {
     this.picker.startDateChanged.asObservable().subscribe((itemChanged: any) => {
       this.startDateChanged.emit(itemChanged);
@@ -216,7 +228,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
     this.picker.closeOnAutoApply = this.closeOnAutoApply;
   }
 
-  ngOnChanges(changes: SimpleChanges): void  {
+  ngOnChanges(changes: SimpleChanges): void {
     for (const change in changes) {
       if (changes.hasOwnProperty(change)) {
         if (this.notForChangesProperty.indexOf(change) === -1) {
@@ -252,6 +264,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
   hide(e?) {
     this.picker.hide(e);
   }
+
   toggle(e?) {
     if (this.picker.isShown) {
       this.hide(e);
@@ -267,15 +280,19 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
   writeValue(value) {
     this.setValue(value);
   }
+
   registerOnChange(fn) {
     this._onChange = fn;
   }
+
   registerOnTouched(fn) {
     this._onTouched = fn;
   }
+
   setDisabledState(state: boolean): void {
     this._disabled = state;
-}
+  }
+
   private setValue(val: any) {
     if (val) {
       this.value = val;
@@ -293,6 +310,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
       this.picker.clear();
     }
   }
+
   /**
    * Set position of the calendar
    */
@@ -308,25 +326,25 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
     }
     if (this.opens === 'left') {
       style = {
-          top: containerTop,
-          left: (element.offsetLeft - container.clientWidth + element.clientWidth) + 'px',
-          right: 'auto'
+        top: containerTop,
+        left: (element.offsetLeft - container.clientWidth + element.clientWidth) + 'px',
+        right: 'auto'
       };
     } else if (this.opens === 'center') {
-        style = {
-          top: containerTop,
-          left: (element.offsetLeft  +  element.clientWidth / 2
-                  - container.clientWidth / 2) + 'px',
-          right: 'auto'
-        };
+      style = {
+        top: containerTop,
+        left: (element.offsetLeft + element.clientWidth / 2
+          - container.clientWidth / 2) + 'px',
+        right: 'auto'
+      };
     } else if (this.opens === 'right') {
-        style = {
-          top: containerTop,
-          left: element.offsetLeft  + 'px',
-          right: 'auto'
-        };
+      style = {
+        top: containerTop,
+        left: element.offsetLeft + 'px',
+        right: 'auto'
+      };
     } else {
-      const position = element.offsetLeft  +  element.clientWidth / 2 - container.clientWidth / 2;
+      const position = element.offsetLeft + element.clientWidth / 2 - container.clientWidth / 2;
       if (position < 0) {
         style = {
           top: containerTop,
@@ -335,9 +353,9 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
         };
       } else {
         style = {
-            top: containerTop,
-            left: position + 'px',
-            right: 'auto'
+          top: containerTop,
+          left: position + 'px',
+          right: 'auto'
         };
       }
     }
@@ -347,6 +365,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
       this._renderer.setStyle(container, 'right', style.right);
     }
   }
+
   inputChanged(e) {
     if (e.target.tagName.toLowerCase() !== 'input') {
       return;
@@ -372,6 +391,7 @@ export class DaterangepickerDirective implements OnInit, OnChanges, DoCheck {
     this.picker.updateView();
 
   }
+
   /**
    * For click outside of the calendar's container
    * @param event event object

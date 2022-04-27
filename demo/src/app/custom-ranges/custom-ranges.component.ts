@@ -15,8 +15,8 @@ export class CustomRangesComponent implements OnInit {
   minDate: dayjs.Dayjs;
   invalidDates: dayjs.Dayjs[] = [];
   tooltips = [
-    {date: dayjs(), text: 'Today is just unselectable'},
-    {date:  dayjs().add(2, 'days'), text: 'Yeeeees!!!'}
+    { date: dayjs(), text: 'Today is just unselectable' },
+    { date: dayjs().add(2, 'days'), text: 'Yeeeees!!!' }
   ];
   inlineDateTime;
   ranges: any = {
@@ -43,20 +43,20 @@ export class CustomRangesComponent implements OnInit {
     ]
   };
 
-  isInvalidDate = (m: dayjs.Dayjs) =>  {
-    return this.invalidDates.some(d => d.isSame(m, 'day') );
-  }
-  isTooltipDate = (m: dayjs.Dayjs) =>  {
+  isInvalidDate = (m: dayjs.Dayjs) => {
+    return this.invalidDates.some(d => d.isSame(m, 'day'));
+  };
+  isTooltipDate = (m: dayjs.Dayjs) => {
     const tooltip = this.tooltips.find(tt => tt.date.isSame(m, 'day'));
     if (tooltip) {
       return tooltip.text;
     } else {
       return false;
     }
-  }
+  };
 
   constructor() {
-    this.maxDate = dayjs().add(2,  'weeks');
+    this.maxDate = dayjs().add(2, 'weeks');
     this.minDate = dayjs().subtract(3, 'days');
 
     this.alwaysShowCalendars = true;
@@ -67,14 +67,18 @@ export class CustomRangesComponent implements OnInit {
       endDate: dayjs().subtract(1, 'days').set('hours', 23).set('minutes', 59)
     };
   }
+
   rangeClicked(range) {
     console.log('[rangeClicked] range is : ', range);
   }
+
   datesUpdated(range) {
     console.log('[datesUpdated] range is : ', range);
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
+
   choosedDateTime(e) {
     this.inlineDateTime = e;
   }

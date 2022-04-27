@@ -31,15 +31,18 @@ export class FullComponent implements OnInit {
     separator: ' To ',
     cancelLabel: 'Cancel',
     applyLabel: 'Okay'
-  }
+  };
   opens: string;
   drops: string;
   timePicker: boolean;
   dateLimit: number;
+
   click() {
   }
-  selected = {start: dayjs().subtract(3, 'days'), end: dayjs().add(3, 'days') };
+
+  selected = { start: dayjs().subtract(3, 'days'), end: dayjs().add(3, 'days') };
   @ViewChild(DaterangepickerDirective, { static: true }) daterangepicker: DaterangepickerDirective;
+
   constructor() {
     this.timePicker = false;
     this.opens = 'right';
@@ -50,10 +53,11 @@ export class FullComponent implements OnInit {
   clear(): void {
     this.daterangepicker.clear();
   }
+
   ngOnInit() {
   }
 
   eventClicked(e): void {
-    console.log({'eventClicked()': e});
+    console.log({ 'eventClicked()': e });
   }
 }

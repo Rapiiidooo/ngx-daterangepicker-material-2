@@ -3,6 +3,7 @@ import * as dayjs from 'dayjs';
 import 'dayjs/locale/fr';
 import { LocaleConfig } from '../../../../src/daterangepicker';
 import * as weekday from 'dayjs/plugin/weekday';
+
 dayjs.extend(weekday);
 dayjs.locale('fr');
 
@@ -18,18 +19,23 @@ export class SingleDatepickerComponent implements OnInit {
     customRangeLabel: ' - ',
     daysOfWeek: dayjs.weekdaysMin(),
     monthNames: dayjs.monthsShort(),
-    firstDay: dayjs.localeData().firstDayOfWeek(),
+    firstDay: dayjs.localeData().firstDayOfWeek()
   };
-  constructor() { }
+
+  constructor() {
+  }
+
   ngOnInit() {
   }
+
   isInvalidDate(date) {
     return date.weekday() === 0;
   }
+
   isCustomDate(date) {
-    return  (
+    return (
       date.weekday() === 0 || date.weekday() === 6
-    )  ? 'mycustomdate' : false;
+    ) ? 'mycustomdate' : false;
   }
 
 }

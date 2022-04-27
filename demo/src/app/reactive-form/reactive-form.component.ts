@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import * as dayjs from 'dayjs';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { LocaleConfig } from '../../../../src/daterangepicker';
 
 @Component({
@@ -13,7 +13,7 @@ export class ReactiveFormComponent {
   form2: FormGroup;
   locale: LocaleConfig = {
     format: 'YYYY-MM-DDTHH:mm:ss.SSSSZ',
-    displayFormat: 'YYYY-MM-DD',
+    displayFormat: 'YYYY-MM-DD'
   };
 
   constructor(private fb: FormBuilder) {
@@ -21,16 +21,16 @@ export class ReactiveFormComponent {
       selected: [{
         startDate: dayjs('2015-11-24T00:00Z'),
         endDate: dayjs('2015-11-26T00:00Z')
-      }, Validators.required],
+      }, Validators.required]
     });
 
     this.form2 = this.fb.group({
       selected: [{
         startDate: '2019-12-11T18:30:00.000Z',
-        endDate: '2019-12-12T18:29:59.000Z',
-      }, Validators.required],
+        endDate: '2019-12-12T18:29:59.000Z'
+      }, Validators.required]
     });
-   }
+  }
 
   submit() {
     console.log(this.form.value);
@@ -39,6 +39,7 @@ export class ReactiveFormComponent {
   submit2() {
     console.log(this.form2.value);
   }
+
   toggleDisable(form: FormGroup) {
     if (form.disabled) {
       form.enable();

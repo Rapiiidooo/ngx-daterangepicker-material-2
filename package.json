@@ -2,6 +2,7 @@
   "name": "ngx-daterangepicker-material-2",
   "version": "5.0.8",
   "description": "Angular2+ date range picker (with material design theme)",
+  "type": "module",
   "keywords": [
     "angular2",
     "angular4",

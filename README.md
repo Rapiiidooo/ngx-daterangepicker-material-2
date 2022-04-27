@@ -1,22 +1,22 @@
-# ngx-daterangepicker-material
+# ngx-daterangepicker-material-2
 
 > Angular 2+ Date range picker.
 
-[![Build Status](https://travis-ci.org/fetrarij/ngx-daterangepicker-material.svg?branch=master)](https://travis-ci.org/fetrarij/ngx-daterangepicker-material)
-[![npm version](https://badge.fury.io/js/ngx-daterangepicker-material.svg)](https://badge.fury.io/js/ngx-daterangepicker-material)
-[![last commit](https://img.shields.io/github/last-commit/fetrarij/ngx-daterangepicker-material.svg)](https://github.com/fetrarij/ngx-daterangepicker-material/commits/master)
+[![Build Status](https://travis-ci.org/fetrarij/ngx-daterangepicker-material-2.svg?branch=master)](https://travis-ci.org/fetrarij/ngx-daterangepicker-material-2)
+[![npm version](https://badge.fury.io/js/ngx-daterangepicker-material-2.svg)](https://badge.fury.io/js/ngx-daterangepicker-material-2)
+[![last commit](https://img.shields.io/github/last-commit/fetrarij/ngx-daterangepicker-material-2.svg)](https://github.com/fetrarij/ngx-daterangepicker-material-2/commits/master)
 
 This `Angular Material` plugin is compatible with Angular 2+ and is Ivy compatible. It leverages `dayjs` to handle date manipulation and parsing. The base for this plugin was originally the [Bootstrap Date Range Picker](http://www.daterangepicker.com), but its dependencies on jQuery, Bootstrap and dayjs.js were removed.
 
 ![](screen.png)
 
-Demo: https://fetrarij.github.io/ngx-daterangepicker-material/
+Demo: https://fetrarij.github.io/ngx-daterangepicker-material-2/
 
 ---
 
 ## Versions
 
-| Angular| ngx-daterangepicker-material|
+| Angular| ngx-daterangepicker-material-2|
 | ------|:------:|
 | >=11.0.0  | v5.x.x |
 | >=9.0.0  | v4.x.x |
@@ -29,14 +29,14 @@ Demo: https://fetrarij.github.io/ngx-daterangepicker-material/
 
  Install the plugin from npm:
 
- `npm install ngx-daterangepicker-material --save` .
+ `npm install ngx-daterangepicker-material-2 --save` .
 
  import **NgxDaterangepickerMd** in your module:
 
 ````typescript
 ...
 import { FormsModule } from '@angular/forms';
-import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material';
+import { NgxDaterangepickerMd } from 'ngx-daterangepicker-material-2';
 import { App } from './app';
 
 @NgModule({
@@ -80,7 +80,7 @@ Typescript:
 ````typescript
 selected: {start: Dayjs, end: Dayjs};
 ````
-You can [play with our online demo here](https://fetrarij.github.io/ngx-daterangepicker-material/)
+You can [play with our online demo here](https://fetrarij.github.io/ngx-daterangepicker-material-2/)
 and [browse our demo code here](./demo/src/app).
 
 ## Inline usage
@@ -88,8 +88,8 @@ and [browse our demo code here](./demo/src/app).
 You can use the component directly in your templates, which will set its `inline` mode to **true**, in which case the calendar won't hide after date/range selection. You can then use the events: `rangeClicked` or `datesUpdated` or `choosedDate` to get its selection state.
 
 ```html
-<ngx-daterangepicker-material (choosedDate)="choosedDate($event)">
-</ngx-daterangepicker-material>
+<ngx-daterangepicker-material-2 (choosedDate)="choosedDate($event)">
+</ngx-daterangepicker-material-2>
 ```
 
 
@@ -288,5 +288,5 @@ Open `http//:localhost:4200` on your browser.
 Run `npm test` or `ng test` to run tests.
 
 
-## [License](https://github.com/fetrarij/ngx-daterangepicker-material/blob/master/LICENSE)
+## [License](https://github.com/fetrarij/ngx-daterangepicker-material-2/blob/master/LICENSE)
 MIT

@@ -23,7 +23,7 @@ export enum SideEnum {
 }
 
 @Component({
-    selector: 'ngx-daterangepicker-material',
+    selector: 'ngx-daterangepicker-material-2',
     styleUrls: ['./daterangepicker.component.scss'],
     templateUrl: './daterangepicker.component.html',
     host: {

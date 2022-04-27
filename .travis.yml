@@ -20,10 +20,10 @@ branches:
 script:
     - npm install
     - npm test
-    - ./node_modules/.bin/ng build --prod --base-href=/ngx-daterangepicker-material/
+    - ./node_modules/.bin/ng build --prod --base-href=/ngx-daterangepicker-material-2/
 
 after_success:
-    - ./node_modules/.bin/ngh --dir demo/dist --repo=https://GH_TOKEN@github.com/fetrarij/ngx-daterangepicker-material.git
+    - ./node_modules/.bin/ngh --dir demo/dist --repo=https://GH_TOKEN@github.com/Rapiiidooo/ngx-daterangepicker-material-2.git
 
 notifications:
     email:

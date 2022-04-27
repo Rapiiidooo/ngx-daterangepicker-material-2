@@ -2,9 +2,9 @@
 
 ##### Chores
 
-*  fix build ([76780d36](https://github.com/fetrarij/ngx-daterangepicker-material/commit/76780d367ad5a586a334dfb18a45dbe2b95fff42))
+*  fix build ([76780d36](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/76780d367ad5a586a334dfb18a45dbe2b95fff42))
 
-* Add `ng add ngx-daterangepicker-material`
+* Add `ng add ngx-daterangepicker-material-2`
 
 * replace moment.js with dayjs
 * Support angular 11 and angular 12
@@ -13,23 +13,23 @@
 
 ##### Chores
 
-* **travis:**  fix build ([de52eea8](https://github.com/fetrarij/ngx-daterangepicker-material/commit/de52eea8b34acfd4afee513d5372f2560d9d94d0))
+* **travis:**  fix build ([de52eea8](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/de52eea8b34acfd4afee513d5372f2560d9d94d0))
 
 * support angular 10
 ##### New Features
 
-* **emptyWeekColumnClass:**  add emptyWeekColumnClass attribute to add a custom class for all date in a week not in the current month Fixes [#315](https://github.com/fetrarij/ngx-daterangepicker-material/pull/315) [#294](https://github.com/fetrarij/ngx-daterangepicker-material/pull/294) [#126](https://github.com/fetrarij/ngx-daterangepicker-material/pull/126) ([ba1d136b](https://github.com/fetrarij/ngx-daterangepicker-material/commit/ba1d136bc2e822595a5626f142ea48558965f8bd))
-* **reactive-forms:**  implemente disable in form control ([7c3265b6](https://github.com/fetrarij/ngx-daterangepicker-material/commit/7c3265b64812684023ad290234d87f5ca443679e))
+* **emptyWeekColumnClass:**  add emptyWeekColumnClass attribute to add a custom class for all date in a week not in the current month Fixes [#315](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/315) [#294](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/294) [#126](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/126) ([ba1d136b](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/ba1d136bc2e822595a5626f142ea48558965f8bd))
+* **reactive-forms:**  implemente disable in form control ([7c3265b6](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/7c3265b64812684023ad290234d87f5ca443679e))
 
 # 3.0.0 (2020-04-05)
 
-This new major release pivots `ngx-daterangepicker-material` to become an `@angular/material` component, in that it now requires `@angular/material` to correctly render and leverages `@angular/material` building blocks throughout. As such, it adheres to theming and UX standards. It now correctly uses the `CDK Overlay` to render the dialog for instance, which takes care of some issues present with the previous implementation (if you had components with a `z-index` > 1000 on your page, you were going to have a bad time).
+This new major release pivots `ngx-daterangepicker-material-2` to become an `@angular/material` component, in that it now requires `@angular/material` to correctly render and leverages `@angular/material` building blocks throughout. As such, it adheres to theming and UX standards. It now correctly uses the `CDK Overlay` to render the dialog for instance, which takes care of some issues present with the previous implementation (if you had components with a `z-index` > 1000 on your page, you were going to have a bad time).
 
-Upgrading from previous versions, you will have to add `@angular/material` to your project, after which the new version of `ngx-daterangepicker-material` should require no further changes to work correctly.
+Upgrading from previous versions, you will have to add `@angular/material` to your project, after which the new version of `ngx-daterangepicker-material-2` should require no further changes to work correctly.
 
 ### New Features
 
--   `ng add ngx-daterangepicker-material` functionality was added to allow users to easily add this component to their Angular project
+-   `ng add ngx-daterangepicker-material-2` functionality was added to allow users to easily add this component to their Angular project
 -   the component now correctly accepts Angular Material themes (the documentation has a theme switcher identical to https://material.angular.io/ to showcase this)
 
 ### Chores
@@ -49,111 +49,111 @@ Upgrading from previous versions, you will have to add `@angular/material` to yo
 ### Chores
 
 -   **deps:**
-    -   bump lodash from 4.17.11 to 4.17.14 ([864a641d](https://github.com/fetrarij/ngx-daterangepicker-material/commit/864a641d76965df73bab84b085d28079f0064775))
-    -   bump lodash.mergewith from 4.6.1 to 4.6.2 ([623909bb](https://github.com/fetrarij/ngx-daterangepicker-material/commit/623909bb4f1edf10089df0ce69cc50714d9dab8f))
+    -   bump lodash from 4.17.11 to 4.17.14 ([864a641d](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/864a641d76965df73bab84b085d28079f0064775))
+    -   bump lodash.mergewith from 4.6.1 to 4.6.2 ([623909bb](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/623909bb4f1edf10089df0ce69cc50714d9dab8f))
 
 ### New Features
 
--   **rangepicker:** update calendar when changing the input element Fix [#115](https://github.com/fetrarij/ngx-daterangepicker-material/pull/115) ([671dcf9a](https://github.com/fetrarij/ngx-daterangepicker-material/commit/671dcf9aab0783ad8131b131068fe60adb426842))
+-   **rangepicker:** update calendar when changing the input element Fix [#115](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/115) ([671dcf9a](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/671dcf9aab0783ad8131b131068fe60adb426842))
 
 ### Bug Fixes
 
--   **label:** clear title to clear label in local ([30f7c2e4](https://github.com/fetrarij/ngx-daterangepicker-material/commit/30f7c2e4b9f2f98a50afa48baec3a72e28438b90))
--   **ranges:** date doesnt update if alwaysShowCalendars = false and keepCalendarOpeningWithRange = true Close [#147](https://github.com/fetrarij/ngx-daterangepicker-material/pull/147) ([28e3684d](https://github.com/fetrarij/ngx-daterangepicker-material/commit/28e3684ddd74f79bca04c6ce204a9fc038b33de4))
+-   **label:** clear title to clear label in local ([30f7c2e4](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/30f7c2e4b9f2f98a50afa48baec3a72e28438b90))
+-   **ranges:** date doesnt update if alwaysShowCalendars = false and keepCalendarOpeningWithRange = true Close [#147](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/147) ([28e3684d](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/28e3684ddd74f79bca04c6ce204a9fc038b33de4))
 
 ### Other Changes
 
--   **demo:** add lockStartDate in full-options page ([1ceff3f9](https://github.com/fetrarij/ngx-daterangepicker-material/commit/1ceff3f92be00eaff293a9a88eaa54c477306b90))
+-   **demo:** add lockStartDate in full-options page ([1ceff3f9](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/1ceff3f92be00eaff293a9a88eaa54c477306b90))
 
 # 2.1.1 (2019-05-04)
 
 ### Documentation Changes
 
--   **demo:** add fr language for demo purpose ([c374cb8d](https://github.com/fetrarij/ngx-daterangepicker-material/commit/c374cb8d63aebb15a3d233c284dcf5c09e626072))
+-   **demo:** add fr language for demo purpose ([c374cb8d](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/c374cb8d63aebb15a3d233c284dcf5c09e626072))
 
 ### Bug Fixes
 
--   **ngModelChange:** initialized by undefined ([5beddf21](https://github.com/fetrarij/ngx-daterangepicker-material/commit/5beddf213314a6085f031fd534019d6a16ad07ed))
+-   **ngModelChange:** initialized by undefined ([5beddf21](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/5beddf213314a6085f031fd534019d6a16ad07ed))
 
 ### Other Changes
 
--   **locale:** update locale config ([41dac5b1](https://github.com/fetrarij/ngx-daterangepicker-material/commit/41dac5b1d4c5a384538138f28a03b10e48c38e8d))
+-   **locale:** update locale config ([41dac5b1](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/41dac5b1d4c5a384538138f28a03b10e48c38e8d))
 
 # 2.1.0 (2019-04-05)
 
 ### Chores
 
 -   **demo:**
-    -   add reactive forms in demo ([d89333c7](https://github.com/fetrarij/ngx-daterangepicker-material/commit/d89333c7a00210fc7e2500a441863659a2d5e98a))
-    -   add reactive forms in demo ([09884ea5](https://github.com/fetrarij/ngx-daterangepicker-material/commit/09884ea526a2a1dcc11671b7c79abf578884349e))
--   **doc:** add development process ([76ef56be](https://github.com/fetrarij/ngx-daterangepicker-material/commit/76ef56be1dfa9f539593994045c266aa28898e96))
--   **package:** add package-lock.json to fix build ([fc91e9bf](https://github.com/fetrarij/ngx-daterangepicker-material/commit/fc91e9bfdbad9e3ebd6c68b334b82d3ddc13ac19))
--   **build:** fix build ([0d930d5c](https://github.com/fetrarij/ngx-daterangepicker-material/commit/0d930d5caf5b884e135a720262e9120ffe807c8f))
+    -   add reactive forms in demo ([d89333c7](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/d89333c7a00210fc7e2500a441863659a2d5e98a))
+    -   add reactive forms in demo ([09884ea5](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/09884ea526a2a1dcc11671b7c79abf578884349e))
+-   **doc:** add development process ([76ef56be](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/76ef56be1dfa9f539593994045c266aa28898e96))
+-   **package:** add package-lock.json to fix build ([fc91e9bf](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/fc91e9bfdbad9e3ebd6c68b334b82d3ddc13ac19))
+-   **build:** fix build ([0d930d5c](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/0d930d5caf5b884e135a720262e9120ffe807c8f))
 
 ### New Features
 
--   **dateLimit:** add the dateLimit option Fix [#118](https://github.com/fetrarij/ngx-daterangepicker-material/pull/118) ([d0564523](https://github.com/fetrarij/ngx-daterangepicker-material/commit/d0564523f86a43f4e6b29f331efbaf1727ba4cbe))
--   **inline:** allow isCustomDate for inline mode [#44](https://github.com/fetrarij/ngx-daterangepicker-material/pull/44) ([b54de73a](https://github.com/fetrarij/ngx-daterangepicker-material/commit/b54de73abce3b8fdc1bb0d9128715c0a2206f9c6))
+-   **dateLimit:** add the dateLimit option Fix [#118](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/118) ([d0564523](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/d0564523f86a43f4e6b29f331efbaf1727ba4cbe))
+-   **inline:** allow isCustomDate for inline mode [#44](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/44) ([b54de73a](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/b54de73abce3b8fdc1bb0d9128715c0a2206f9c6))
 
 ### Bug Fixes
 
 -   **calendar:**
-    -   fix model's initialization ([e22e741e](https://github.com/fetrarij/ngx-daterangepicker-material/commit/e22e741ebb631759487fa51b42fc1411efe2f44d))
-    -   fix model's initialization ([10f4a33b](https://github.com/fetrarij/ngx-daterangepicker-material/commit/10f4a33bd1fe399a6e23753401293d6ffee61b01))
+    -   fix model's initialization ([e22e741e](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/e22e741ebb631759487fa51b42fc1411efe2f44d))
+    -   fix model's initialization ([10f4a33b](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/10f4a33bd1fe399a6e23753401293d6ffee61b01))
 -   **firstDay:**
-    -   jumps day label with multiple components Fix [#144](https://github.com/fetrarij/ngx-daterangepicker-material/pull/144) ([d52868eb](https://github.com/fetrarij/ngx-daterangepicker-material/commit/d52868ebabbc5783fc0596baa2df11f86f72e043))
-    -   jumps day label with multiple components Fix [#144](https://github.com/fetrarij/ngx-daterangepicker-material/pull/144) ([64f372dc](https://github.com/fetrarij/ngx-daterangepicker-material/commit/64f372dcdc453aa14913cd6e8d02732bbf86fd7c))
--   **ranges:** Timepicker not updated when range clicked Close [#1015](https://github.com/fetrarij/ngx-daterangepicker-material/pull/1015) ([8957c67c](https://github.com/fetrarij/ngx-daterangepicker-material/commit/8957c67caa15d561098c25dfa2aadfe879554b85))
--   **style:** timepicker hided ([3ec5798e](https://github.com/fetrarij/ngx-daterangepicker-material/commit/3ec5798e5cbada223101ba73d2b69aecdd53f501))
+    -   jumps day label with multiple components Fix [#144](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/144) ([d52868eb](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/d52868ebabbc5783fc0596baa2df11f86f72e043))
+    -   jumps day label with multiple components Fix [#144](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/144) ([64f372dc](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/64f372dcdc453aa14913cd6e8d02732bbf86fd7c))
+-   **ranges:** Timepicker not updated when range clicked Close [#1015](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/1015) ([8957c67c](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/8957c67caa15d561098c25dfa2aadfe879554b85))
+-   **style:** timepicker hided ([3ec5798e](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/3ec5798e5cbada223101ba73d2b69aecdd53f501))
 
 ### Other Changes
 
--   **dateLimit:** add the dateLimit option Fix [#118](https://github.com/fetrarij/ngx-daterangepicker-material/pull/118) ([7ad369a6](https://github.com/fetrarij/ngx-daterangepicker-material/commit/7ad369a6d08454b7bd4b12823b14e4854e3bd015))
+-   **dateLimit:** add the dateLimit option Fix [#118](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/118) ([7ad369a6](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/7ad369a6d08454b7bd4b12823b14e4854e3bd015))
 
 # 2.0.0 (2019-02-04)
 
 ### Chores
 
--   **build:** fix build ([0d930d5c](https://github.com/fetrarij/ngx-daterangepicker-material/commit/0d930d5caf5b884e135a720262e9120ffe807c8f))
+-   **build:** fix build ([0d930d5c](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/0d930d5caf5b884e135a720262e9120ffe807c8f))
 
--   **test:** fix test with new imports ([e151ecb8](https://github.com/fetrarij/ngx-daterangepicker-material/commit/e151ecb8d284b9fc6e9e9e8c681e4c1457d46463))
+-   **test:** fix test with new imports ([e151ecb8](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/e151ecb8d284b9fc6e9e9e8c681e4c1457d46463))
 
 ### New Features
 
--   **daterangepicker:** add global locale config [#69](https://github.com/fetrarij/ngx-daterangepicker-material/pull/69) ([0c303f7c](https://github.com/fetrarij/ngx-daterangepicker-material/commit/0c303f7cb3028ea31642bb4cfc7d9e315a6dcb4e))
+-   **daterangepicker:** add global locale config [#69](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/69) ([0c303f7c](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/0c303f7cb3028ea31642bb4cfc7d9e315a6dcb4e))
 
 **_Breaking change:_**
 Instead of using `NgxDaterangepickerMd` you should now use `NgxDaterangepickerMd.forRoot()` in imports.
 
 ### Bug Fixes
 
--   **locale:** fix setting locale for individual and inline mode Fix [#75](https://github.com/fetrarij/ngx-daterangepicker-material/pull/75) ([f73c7515](https://github.com/fetrarij/ngx-daterangepicker-material/commit/f73c75156490e689d061b2dc2369b468ce3712dc))
--   **typo:** typo in readme ([9b70f872](https://github.com/fetrarij/ngx-daterangepicker-material/commit/9b70f872db4f41d917813446d2b7690077272965))
+-   **locale:** fix setting locale for individual and inline mode Fix [#75](https://github.com/fetrarij/ngx-daterangepicker-material-2/pull/75) ([f73c7515](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/f73c75156490e689d061b2dc2369b468ce3712dc))
+-   **typo:** typo in readme ([9b70f872](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/9b70f872db4f41d917813446d2b7690077272965))
 
 ### Other Changes
 
--   **global-locale:** add doc for global locale ([57530799](https://github.com/fetrarij/ngx-daterangepicker-material/commit/57530799df836662232fcb2c9819db65b54e479e))
+-   **global-locale:** add doc for global locale ([57530799](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/57530799df836662232fcb2c9819db65b54e479e))
 
 ### Refactors
 
--   **code:** refactoring ([92f01ecf](https://github.com/fetrarij/ngx-daterangepicker-material/commit/92f01ecfb8416f01a33f2ee76fa68adf1866d735))
+-   **code:** refactoring ([92f01ecf](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/92f01ecfb8416f01a33f2ee76fa68adf1866d735))
 
 # 1.2.7 (2018-12-14)
 
 ### New Features
 
--   **css:** make easy for styling ([2e649c6a](https://github.com/fetrarij/ngx-daterangepicker-material/commit/2e649c6a875e856502c8f44744978b47ec4dd573))
+-   **css:** make easy for styling ([2e649c6a](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/2e649c6a875e856502c8f44744978b47ec4dd573))
 
 ### Bug Fixes
 
--   **onPush:** popup doesn't close on first click when OnPush changeDetection ([7e2d27d6](https://github.com/fetrarij/ngx-daterangepicker-material/commit/7e2d27d64ac3bcefe84a6abd2f202a9d36714f1b))
--   **ie11-clickdate:** Unable to select custom date range from calendar in IE1 ([0a07daba](https://github.com/fetrarij/ngx-daterangepicker-material/commit/0a07dabaf2eb4ae1abd16e1513389d5d64a0a114))
--   **locale-format:** Locale.format does not change date formats ([5c4f7545](https://github.com/fetrarij/ngx-daterangepicker-material/commit/5c4f75453ecafae393b96f61118adc8034c13edc))
+-   **onPush:** popup doesn't close on first click when OnPush changeDetection ([7e2d27d6](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/7e2d27d64ac3bcefe84a6abd2f202a9d36714f1b))
+-   **ie11-clickdate:** Unable to select custom date range from calendar in IE1 ([0a07daba](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/0a07dabaf2eb4ae1abd16e1513389d5d64a0a114))
+-   **locale-format:** Locale.format does not change date formats ([5c4f7545](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/5c4f75453ecafae393b96f61118adc8034c13edc))
 
 ### Code Style Changes
 
--   **move-css:** move .btn / .clear / .buttons / [hidden] under .md-drppicker ([76406c02](https://github.com/fetrarij/ngx-daterangepicker-material/commit/76406c02e885612f1a73a57ce1b99a8aa6b5a331))
--   **month-year-select:** add cursor pointer ([916810fd](https://github.com/fetrarij/ngx-daterangepicker-material/commit/916810fd6ad2024c1c898198ef015259556b8fca))
+-   **move-css:** move .btn / .clear / .buttons / [hidden] under .md-drppicker ([76406c02](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/76406c02e885612f1a73a57ce1b99a8aa6b5a331))
+-   **month-year-select:** add cursor pointer ([916810fd](https://github.com/fetrarij/ngx-daterangepicker-material-2/commit/916810fd6ad2024c1c898198ef015259556b8fca))
 
 # 1.2.6 (2018-11-29)
 

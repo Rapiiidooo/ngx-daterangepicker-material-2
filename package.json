@@ -1,6 +1,6 @@
 {
-  "name": "ngx-daterangepicker-material",
-  "version": "5.0.1",
+  "name": "ngx-daterangepicker-material-2",
+  "version": "5.0.2",
   "description": "Angular 9 and 10 date range picker (with material design theme)",
   "keywords": [
     "angular2",
@@ -21,7 +21,7 @@
     "dayjs",
     "picker"
   ],
-  "homepage": "https://github.com/fetrarij/ngx-daterangepicker-material",
+  "homepage": "https://github.com/fetrarij/ngx-daterangepicker-material-2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -33,7 +33,7 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "ngc": "./node_modules/.bin/ngc -p tsconfig.json",
-    "gh-pages": "ng build --prod --base-href=\"/ngx-daterangepicker-material/\" && ngh --dir demo/dist",
+    "gh-pages": "ng build --prod --base-href=\"/ngx-daterangepicker-material-2/\" && ngh --dir demo/dist",
     "build": "ng-packagr -p package.json",
     "build:schematics": "tsc -p ./tsconfig.schematics.json",
     "copy:schematics": "cpr schematics/dist dist/schematics && cp ./schematics/collection.json ./dist/schematics && cp ./schematics/ng-add/schema.json ./dist/schematics/ng-add",
@@ -42,10 +42,10 @@
   "author": "Fetrarijaona R.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fetrarij/ngx-daterangepicker-material.git"
+    "url": "https://github.com/fetrarij/ngx-daterangepicker-material-2.git"
   },
   "peerDependencies": {
-    "dayjs": "^1.10.4"
+    "dayjs": "^1.11.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.1102.1",
@@ -100,7 +100,7 @@
     "dest": "dist"
   },
   "dependencies": {
-    "dayjs": "^1.10.4",
+    "dayjs": "^1.11.1",
     "tslib": "^2.0.0"
   },
   "schematics": "./schematics/collection.json"

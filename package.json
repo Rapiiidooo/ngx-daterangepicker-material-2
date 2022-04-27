@@ -1,6 +1,6 @@
 {
   "name": "ngx-daterangepicker-material-2",
-  "version": "5.0.2",
+  "version": "5.0.3",
   "description": "Angular 9 and 10 date range picker (with material design theme)",
   "keywords": [
     "angular2",
@@ -13,6 +13,7 @@
     "angular10",
     "ng2",
     "daterangepicker",
+    "daterangepicker-2",
     "material",
     "component",
     "directive",
@@ -21,7 +22,7 @@
     "dayjs",
     "picker"
   ],
-  "homepage": "https://github.com/fetrarij/ngx-daterangepicker-material-2",
+  "homepage": "https://github.com/Rapiiidooo/ngx-daterangepicker-material-2",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -42,7 +43,7 @@
   "author": "Fetrarijaona R.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/fetrarij/ngx-daterangepicker-material-2.git"
+    "url": "https://github.com/Rapiiidooo/ngx-daterangepicker-material-2.git"
   },
   "peerDependencies": {
     "dayjs": "^1.11.1"

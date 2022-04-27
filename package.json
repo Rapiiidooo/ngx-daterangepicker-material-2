@@ -1,6 +1,6 @@
 {
   "name": "ngx-daterangepicker-material-2",
-  "version": "5.0.5",
+  "version": "5.0.6",
   "description": "Angular 9 and 10 date range picker (with material design theme)",
   "keywords": [
     "angular2",
@@ -38,7 +38,8 @@
     "build": "ng-packagr -p package.json",
     "build:schematics": "tsc -p ./tsconfig.schematics.json",
     "copy:schematics": "cpr schematics/dist dist/schematics && cp ./schematics/collection.json ./dist/schematics && cp ./schematics/ng-add/schema.json ./dist/schematics/ng-add",
-    "postbuild": "npm run build:schematics && npm run copy:schematics"
+    "postbuild": "npm run build:schematics && npm run copy:schematics",
+    "postinstall": "ngcc --properties es2015 browser module main --first-only --create-ivy-entry-points"
   },
   "author": "Fetrarijaona R.",
   "repository": {
